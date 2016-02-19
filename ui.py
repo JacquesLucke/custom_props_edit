@@ -18,14 +18,10 @@ class CustomPropsEditPanel(bpy.types.Panel):
         settings = context.scene.custom_props_edit
         
         box = layout.box()
-        header_row = box.row(align = True)
-        header_row.label("Name")
-        header_row.prop(settings, "remove_all")
+        box.prop(settings, "remove_all")
         
         col = box.column(align = True)
         for item in settings.property_edit_settings:
-            row = col.row(align = True)
-            row.label(repr(item.property_name))
-            row.prop(item, "remove")
+            col.prop(item, "remove", text = repr(item.property_name))
             
         
