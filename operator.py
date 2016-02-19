@@ -4,7 +4,7 @@ import bpy
 class SearchCustomProperties(bpy.types.Operator):
     bl_idname = "cpe.search_custom_properties"
     bl_label = "Search Custom Properties"
-    bl_description = ""
+    bl_description = "Search for custom properties on selected objects"
     bl_options = {"REGISTER"}
 
     def execute(self, context):
@@ -26,7 +26,7 @@ class SearchCustomProperties(bpy.types.Operator):
 class RemoveSelectedProperties(bpy.types.Operator):
     bl_idname = "cpe.remove_selected_properties"
     bl_label = "Remove Selected Properties"
-    bl_description = ""
+    bl_description = "Remove selected custom properties on selected objects (maybe some properties cannot be removed)"
     bl_options = {"REGISTER"}
 
     def execute(self, context):
